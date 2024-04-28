@@ -4,7 +4,7 @@
 function App() {
   
   return (
-    <h1>chai aur reaci with vte | aastha</h1>
+    <h1>chai aur react with vte | aastha</h1>
     
   )
 }
