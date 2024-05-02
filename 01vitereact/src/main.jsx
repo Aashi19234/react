@@ -2,10 +2,18 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+// we can create a function here itself and call it
+ function MyApp(){
+  return (
+    <div>
+      <h1>Custom App</h1>
+    </div>
+  )
+ }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <MyApp />
   </React.StrictMode>,
 )
 
