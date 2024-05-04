@@ -29,6 +29,8 @@ let [counter,setCounter]=useState(15)// default value di h usestate ko
 
   }
   let[value,setvalue]=useState(10)
+  // usestate hook -> The useState hook in React is used to manage state in function components.
+  // It allows you to declare a state variable and a function to update it
   const removevalue=()=>{
     console.log("clicked",value);
     if(value>0){
