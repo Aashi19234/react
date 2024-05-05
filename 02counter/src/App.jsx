@@ -16,12 +16,29 @@ let [counter,setCounter]=useState(15)// default value di h usestate ko
     console.log("clicked", counter);
     //counter=counter+1;// here in browser the value is being updated but not on ui
     // here the problem is ui updation
-    if(counter<20){
+    
+    //setCounter(counter+1)
+
+    // here's a interview question on this counter
+    // what will be the output on doing this?
+    /*setCounter(counter+1)
     setCounter(counter+1)
-    }
-    else{
-      console.log("cannot increase value")
-    }
+    setCounter(counter+1)
+    setCounter(counter+1)*/
+
+    // output-> addvalue click krke bss ek hi value se increase hogaa not 5 because usestate sends updates to ui and variable in batches.
+    // it will consider these 4 setcounters as a whole batch and will increment by 1.
+    // Batching, introduced in React 18, allows React to group multiple state updates that occur within a single task or event handler into a single batch
+
+    // inorder to increase value by 4 we will do this:
+    setCounter((prevCounter)=> prevCounter+1)
+    setCounter((prevCounter)=> prevCounter+1)
+    setCounter((prevCounter)=> prevCounter+1)
+    setCounter((prevCounter)=> prevCounter+1)
+
+   // here it will not be considered as a batch because previous state will be taken when a function returns it and everytime it willl differ.
+   // but in case of counter +1 , it willl access the same value given as default.
+    
     
     // iss code se jaha jaha bhi counter variable hoga sb jgh ho jaegi change value
 
