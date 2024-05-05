@@ -80,3 +80,48 @@ export default App
 // why javascript cannot update all counter variables like this?
 //-> When you create a button in JavaScript with an onclick function that increases the value of a counter variable by 1, 
 //it will only affect the counter variable within the scope of your JavaScript code.
+// in order to update mulitple counters in js, this will be the code which is less effecient.
+
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counter Button</title>
+</head>
+<body>
+
+<button class="counterButton">Click me!</button>
+<p>Counter 1: <span class="counter">0</span></p>
+
+<button class="counterButton">Click me!</button>
+<p>Counter 2: <span class="counter">0</span></p>
+
+<button class="counterButton">Click me!</button>
+<p>Counter 3: <span class="counter">0</span></p>
+
+<script>
+    // Get all the buttons and counter elements
+    var buttons = document.getElementsByClassName('counterButton');
+    var counters = document.getElementsByClassName('counter');
+    
+    // Loop through each button
+    for (var i = 0; i < buttons.length; i++) {
+        // Add a click event listener to each button
+        buttons[i].addEventListener('click', function(index) {
+            return function() {
+                // Increment the corresponding counter
+                var counter = parseInt(counters[index].textContent);
+                counter++;
+                // Update the corresponding counter display
+                counters[index].textContent = counter;
+            };
+        }(i)); // Pass the current index to the event listener function
+    }
+</script>
+
+</body>
+</html>
+ */
+
