@@ -52,3 +52,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 // anotherelement will work because it contains a normal a tag
 
+// createRoot: it creates a DOM like strcuture behind the scene like browser. It does this because it compares main dom and its dom and update those things which are being updated in UI.
+// Browser deletes the whole DOM and repaints the whole DOM which means page reloading.
+// repaint means web structure is getting ready again.
+// Virtual dom: we can trace whole dom in a tree like structure and the values which are being changed in dom can be replaced in tree.
+// main dom and virtual dom ->
+// The main DOM in React JS, or the Document Object Model, is a programming interface for HTML and XML documents. 
+//It represents the page structure and allows programs to manipulate the document's content, structure, and styles.
+//In React, the Virtual DOM is an exact copy of the browser DOM, but in memory. React components are inserted as children to the virtual DOM.
+// The virtual DOM is the reason React renders so quickly and efficiently.
