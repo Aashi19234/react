@@ -44,10 +44,11 @@ const copyPasswordtoclipboard = useCallback(()=>{
 }, [password])// optimise krne k lie use krre h usecallback normal function bhi bna skte
 useEffect(()=>{passwordgenerator()}, [length,numberAllowed,charAllowed,passwordgenerator])// first time jab page load hga tb y call hga and after that jb bhi kisi dependencies m changes hnge tb hga
 // isme hmara jese hi changes dikhe password m toh firse run  krdo function ko
+//passwordgenerator(); ese krenge toh code ek infinite loop m chla jaega due to too many renders.
 
 // ham normally passworedgenerator ko call ni kr skte kyuki kab kaha kya  render hga vo ham control ni kr skte vo react control krega
 
-// useCallback hook will be used in order to call the passwordgenerator function after numbers,characters button is clicked
+// useCallback hook will be used in order to generate the passwordgenerator function after numbers,characters button is clicked
 // useCallback is a React Hook that lets you cache a function definition between re-renders.
 // it will help to optimize the continous calling of a particular function.
 // it stores the function in memory bcoz when we rerun it then the part which is similar to stored function can be used from that cache.
