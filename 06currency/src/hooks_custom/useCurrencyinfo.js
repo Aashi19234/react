@@ -5,8 +5,9 @@ function useCurrencyInfo(currency){
     const [data,setData]=useState({})// incase fetch call ni hri toh emtpy object hai toh crash ni hga
 
     useEffect(()=>{
-        fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`
-    ).then((res)=>res.json())// Api response ko json m convert krdia
+        fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/
+        latest/currencies/${currency}.json`)
+    .then((res)=>res.json())// Api response ko json m convert krdia
     .then((res)=>setData(res[currency]))// object access krna h toh square bracket se lia, and currency islie lia bcoz m api m hm jo currency daaalre h like inr,usd key vahi h toh in dono m se jb bhi koi access krna ho toh currency
     //dono currency m jiska call aaega vo use ho jaega [currency daalke]
 }, [currency])// we are using useEffect hook to fetch api because we want to call this hook
