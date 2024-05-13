@@ -2,6 +2,7 @@ import { useState, useCallback, useEffect, useRef } from 'react'
 
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import './App.css'
 
 
 function App() {
@@ -60,7 +61,7 @@ useEffect(()=>{passwordgenerator()}, [length,numberAllowed,charAllowed,passwordg
 
   return (
     <>
-    <div className="flex justify-center items-start mt-24">
+    <div className="flex justify-center items-center h-screen">
   <div className="w-full max-w-md shadow-md rounded-lg px-4 py-3 bg-gray-800 text-orange-500">
     <h1 className="text-white text-center my-3">Password generator</h1>
     <div className="flex shadow rounded-lg overflow-hidden justify-center mb-4">
