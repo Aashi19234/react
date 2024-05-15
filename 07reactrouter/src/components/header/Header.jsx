@@ -111,3 +111,10 @@ Navlink-> it is same as link but it provides some additional features.
 -> callback classes ko manipulate kr skte hai through variable {isActive},isse hm jis url pr hnge uska color alg ho jaega bki saare urls se
 
 */
+
+/*
+Loader: it allows to make direct api call to fetch data.
+-> jese hamne github api use ki hai toh kya hga jese hi hm apna curson github pr leke jaenge navbar m toh tbhi hmara fetching shuru ho jaega and data cache m rkhdega
+-> useEffect se bhi jldi work krta h y
+
+*/
