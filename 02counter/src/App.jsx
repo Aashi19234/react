@@ -59,8 +59,10 @@ let [counter,setCounter]=useState(15)// default value di h usestate ko
   }
 // react controls ui updation
   // hooks- helps in data updation in UI
-  // Hooks allow function components to have access to state and other React features. Because of this, class components are generally no longer needed.
-  //Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks don't work inside classes — they let you use React without classes.
+  // Hooks allow function components to have access to state and other React features. Because of this, class components are generally no
+  // longer needed.
+  //Hooks are functions that let you “hook into” React state and lifecycle features from function components.
+  // Hooks don't work inside classes — they let you use React without classes.
   // In React, state is a plain JavaScript object that stores data specific to a component.
 
 
